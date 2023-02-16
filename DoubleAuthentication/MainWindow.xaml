@@ -1,0 +1,20 @@
+﻿<Window x:Class="DoubleAuthentication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DoubleAuthentication"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <Label Content="Логин" Width="120"/>
+            <TextBox x:Name="LoginB" TextWrapping="Wrap" Text="" Width="120"/>
+            <Label Content="Пароль" Width="120"/>
+            <PasswordBox x:Name="PasswordB" Width="120"/>
+            <Button x:Name="EnterBtn" Content="Войти" FontSize="18" Width="120" Margin="0,20,0,0" Click="EnterBtn_Click"/>
+        </StackPanel>
+        <Button x:Name="GetCodeBtn" Content="Получить код" FontSize="18" Width="120" Margin="340,256,340,149" Visibility="Collapsed" IsEnabled="False" Click="GetCodeBtn_Click"/>
+        <TextBlock x:Name="TimerCode" HorizontalAlignment="Center" Margin="0,290,0,0" TextWrapping="Wrap" Text="Получить новый код можно будет через 60 секунд" VerticalAlignment="Top" Visibility="Collapsed"/>
+    </Grid>
+</Window>
