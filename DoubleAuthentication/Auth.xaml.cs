@@ -23,7 +23,7 @@ namespace DoubleAuthentication
         int ten = 10;
         DispatcherTimer disTimer = new DispatcherTimer();
         string code;
-        public Auth()
+        public Auth(string code)
         {
             InitializeComponent();
             disTimer.Interval = new TimeSpan(0, 0, 1);

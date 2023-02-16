@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="CaptchaWind" Height="450" Width="800">
     <Grid>
-        
+        <Button x:Name="capBtn" Content="Ввести" HorizontalAlignment="Center" Margin="0,322,0,0" VerticalAlignment="Top" Height="31" Width="164" Click="capBtn_Click"/>
+        <TextBox x:Name="capBox" HorizontalAlignment="Center" Margin="0,270,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="269" Height="30"/>
+        <Canvas x:Name="cap" Margin="150,106,150,178" Width="500" Height="150"/>
+        <Label Content="Введите капчу" HorizontalAlignment="Center" Margin="0,46,0,0" VerticalAlignment="Top" FontSize="20"/>
+
     </Grid>
 </Window>

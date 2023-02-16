@@ -82,14 +82,14 @@ namespace DoubleAuthentication
             int code = rnd.Next(0, 100000);
             MessageBox.Show("Код для входа: " + code.ToString("D5"));
             Auth auth = new Auth(code.ToString("D5"));
-            Auth.ShowDialog();
-            if (correct == true) // Если пароль правильный, то выводим форму после авторизации
+            auth.ShowDialog();
+            if (correct == true) 
             {
                 MessageBox.Show("Вы успешно авторизованы!");
             }
-            else // Если введено неверное число или не успели
+            else 
             {
-                if (countError >= 1) // Если второй раз код введён не верно, то выводим CAPTCHA
+                if (countError >= 1) 
                 {
                     CaptchaWind captcha = new CaptchaWind();
                     captcha.ShowDialog();
@@ -97,7 +97,7 @@ namespace DoubleAuthentication
                     {
                         MessageBox.Show("Вы успешно авторизованы!");
                     }
-                    else // Если введено не верно
+                    else 
                     {
                         MessageBox.Show("Текст введён не верно!");
                         CaptchaWind captchaR = new CaptchaWind();
@@ -119,9 +119,9 @@ namespace DoubleAuthentication
                         }
                     }
                 }
-                else // Если первый раз код введён не верно
+                else
                 {
-                    if (countNum == 5) // Если введено 5 значное число
+                    if (countNum == 5) 
                     {
                         MessageBox.Show("Введенный код не является верным! ");
                     }
